@@ -1,5 +1,4 @@
-﻿using ChatApp.ViewModels;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,11 +16,11 @@ using System.Windows.Shapes;
 namespace ChatApp.CustomControls
 {
     /// <summary>
-    /// Logika interakcji dla klasy Status.xaml
+    /// Logika interakcji dla klasy Lista.xaml
     /// </summary>
-    public partial class Status : UserControl
+    public partial class Lista : UserControl
     {
-        public Status()
+        public Lista()
         {
             InitializeComponent();
         }

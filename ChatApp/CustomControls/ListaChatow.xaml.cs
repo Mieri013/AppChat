@@ -1,10 +1,15 @@
-﻿using ChatApp.ViewModels;
-using System;
+﻿using System;
+using ChatApp.ViewModels;
+using ChatApp.CustomControls;
+using ChatApp.Models;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Runtime.CompilerServices;
+using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
@@ -17,11 +22,11 @@ using System.Windows.Shapes;
 namespace ChatApp.CustomControls
 {
     /// <summary>
-    /// Logika interakcji dla klasy Status.xaml
+    /// Logika interakcji dla klasy ListaChatow.xaml
     /// </summary>
-    public partial class Status : UserControl
+    public partial class ListaChatow : UserControl
     {
-        public Status()
+        public ListaChatow()
         {
             InitializeComponent();
         }

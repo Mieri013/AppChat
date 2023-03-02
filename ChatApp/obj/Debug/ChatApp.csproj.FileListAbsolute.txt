@@ -18,3 +18,6 @@ C:\Users\admin\Documents\GitHub\AppChat\ChatApp\obj\Debug\App.baml
 C:\Users\admin\Documents\GitHub\AppChat\ChatApp\obj\Debug\Assets\icons.baml
 C:\Users\admin\Documents\GitHub\AppChat\ChatApp\obj\Debug\CustomControls\Status.g.cs
 C:\Users\admin\Documents\GitHub\AppChat\ChatApp\obj\Debug\CustomControls\Status.baml
+C:\Users\admin\Documents\GitHub\AppChat\ChatApp\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\admin\Documents\GitHub\AppChat\ChatApp\obj\Debug\CustomControls\Lista.g.cs
+C:\Users\admin\Documents\GitHub\AppChat\ChatApp\obj\Debug\CustomControls\Lista.baml
