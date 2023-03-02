@@ -25,9 +25,12 @@
                 <RowDefinition/>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
+                <!--Dla listy kontaktów-->
                 <ColumnDefinition Width="Auto"/>
+                <!--Okno rozmów-->
                 <ColumnDefinition/>
-                <ColumnDefinition Width="Auto"/>
+                <!--Profil-->
+                <ColumnDefinition Width="Auto"/> 
             </Grid.ColumnDefinitions>
             
             <!--Pasek Tytułu-->
@@ -69,6 +72,67 @@
                     </StackPanel>
                 </Grid>
             </Border>
+
+            <!--Lista kontaktów-->
+            <Grid Grid.Row="1" MaxWidth="406">
+                <Grid.RowDefinitions>
+
+                    <!--Nazwa-->
+                    <RowDefinition Height="Auto"/>
+
+                    <!--Pole wyszukiwania-->
+                    <RowDefinition Height="Auto"/>
+
+                    <!--Status-->
+                    <RowDefinition Height="Auto"/>
+
+                    <!--Lista chatów-->
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <!--Nazwa-->
+                <Grid 
+                    Height="75"
+                    Margin="15,0">
+                    <Grid.ColumnDefinitions>
+                        
+                        <!--Tytuł-->
+                        <ColumnDefinition Width="Auto"/>
+                        
+                        <!--Puste miejsce-->
+                        <ColumnDefinition/>
+                        
+                        <!--Guzik wyszukiwania-->
+                        <ColumnDefinition Width="40"/>
+                        
+                        <!--Guziki-->
+                        <ColumnDefinition Width="40"/>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock 
+                        Text="Chats"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Center"
+                        FontSize="20"
+                        FontWeight="SemiBold"/>
+
+                    <!--Guzik wyszukiwania-->
+                    <Button
+                        Grid.Column="2"
+                        x:Name="btnSearchButtonChat"
+                        Content="{StaticResource search}"
+                        Style="{StaticResource IconButtonStyle}"/>
+                    
+                    <!--Więcej opcji rozwijanego menu-->
+                    <ToggleButton 
+                        Grid.Column="3"
+                        Name="btnMoreOptions"
+                        Content="{StaticResource more}"
+                        Style="{StaticResource ToggleIconButtonStyle}"/>
+                </Grid>
+                
+                <!--Pole wyszukiwania-->
+            </Grid>
         </Grid>
     </Border>
 </Window>
