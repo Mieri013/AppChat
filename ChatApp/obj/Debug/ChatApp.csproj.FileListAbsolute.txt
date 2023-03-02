@@ -16,3 +16,5 @@ C:\Users\admin\Documents\GitHub\AppChat\ChatApp\obj\Debug\ChatApp.exe
 C:\Users\admin\Documents\GitHub\AppChat\ChatApp\obj\Debug\ChatApp.pdb
 C:\Users\admin\Documents\GitHub\AppChat\ChatApp\obj\Debug\App.baml
 C:\Users\admin\Documents\GitHub\AppChat\ChatApp\obj\Debug\Assets\icons.baml
+C:\Users\admin\Documents\GitHub\AppChat\ChatApp\obj\Debug\CustomControls\Status.g.cs
+C:\Users\admin\Documents\GitHub\AppChat\ChatApp\obj\Debug\CustomControls\Status.baml

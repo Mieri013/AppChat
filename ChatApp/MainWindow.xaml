@@ -35,7 +35,7 @@
             
             <!--Pasek Tytułu-->
             <Border 
-                Background="#49a078"
+                Background="#F19CBB"
                 CornerRadius="20,20,0,0"
                 Grid.ColumnSpan="3"
                 Height="50"
@@ -66,7 +66,7 @@
                                 Style="{StaticResource IconButtonStyle}"/>
                         <Button x:Name="btnClose"
                                 Content="{StaticResource close}"
-                                Foreground="IndianRed"
+                                Foreground="#660000"
                                 Click="btnClose_Click"
                                 Style="{StaticResource IconButtonStyle}"/>
                     </StackPanel>
@@ -74,7 +74,7 @@
             </Border>
 
             <!--Lista kontaktów-->
-            <Grid Grid.Row="1" MaxWidth="406">
+            <Grid Grid.Row="1" MinWidth="406">
                 <Grid.RowDefinitions>
 
                     <!--Nazwa-->
@@ -152,6 +152,9 @@
                         VerticalAlignment="Stretch"
                         />
                 </Border>
+                
+                <!--Miniaturki-->
+                
             </Grid>
         </Grid>
     </Border>
