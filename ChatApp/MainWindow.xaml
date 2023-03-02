@@ -132,6 +132,26 @@
                 </Grid>
                 
                 <!--Pole wyszukiwania-->
+                <Border
+                    Background="LightGray"
+                    CornerRadius="15"
+                    Grid.Row="1"
+                    Margin="20"
+                    Height="50"
+                    x:Name="searchAreaBorder"
+                    FocusManager.FocusedElement="{Binding ElementName=searchDoubt}"
+                    >
+                    <!--FocusManager.FocusedElement <- fokusowanie tekstu kiedy border się fokusuje-->
+                    <TextBox
+                        Background="Transparent"
+                        BorderThickness="0"
+                        Name="searchDoubt"
+                        Padding="12,0"
+                        Text="Wyszukaj tekst"
+                        VerticalContentAlignment="Center"
+                        VerticalAlignment="Stretch"
+                        />
+                </Border>
             </Grid>
         </Grid>
     </Border>
