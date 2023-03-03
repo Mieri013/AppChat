@@ -77,9 +77,49 @@ namespace ChatApp.ViewModels
             };
             OnPropertyChanged("statusCollection");
         }
+
+        public ObservableCollection<ListaData> Chats { get; set; }
+        
+        void LoadChats()
+        {
+            Chats = new ObservableCollection<ListaData>()
+            {
+                new ListaData
+                {
+                    ImieKontakt = "Kinga",
+                    ZdjecieKontakt = new Uri("", UriKind.RelativeOrAbsolute),
+                    Wiadomosc = "Witaj! Co u Ciebie?",
+                    OstCzasWiadomosc = "Wt 13:15",
+                    Wybrany = true
+                },
+                new ListaData
+                {
+                    ImieKontakt = "Adrian",
+                    ZdjecieKontakt = new Uri("", UriKind.RelativeOrAbsolute),
+                    Wiadomosc = "Żyjesz tam?",
+                    OstCzasWiadomosc = "Pt 20:10"
+                },
+                new ListaData
+                {
+                    ImieKontakt = "Ala",
+                    ZdjecieKontakt = new Uri("", UriKind.RelativeOrAbsolute),
+                    Wiadomosc = "To o której jutro?",
+                    OstCzasWiadomosc = "Nd 04:20"
+                },
+                new ListaData
+                {
+                    ImieKontakt = "Paweł",
+                    ZdjecieKontakt = new Uri("", UriKind.RelativeOrAbsolute),
+                    Wiadomosc = "Weź się do pracy",
+                    OstCzasWiadomosc = "Pon 18:18"
+                },
+            };
+            OnPropertyChanged();
+        }
         public ViewModel()
         {
             LoadStatus();
+            LoadChats();
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

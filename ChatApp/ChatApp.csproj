@@ -58,6 +58,7 @@
     <Compile Include="CustomControls\Lista.xaml.cs">
       <DependentUpon>Lista.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Models\ListaData.cs" />
     <Compile Include="ViewModels\ViewModel.cs" />
     <Page Include="Assets\icons.xaml">
       <Generator>MSBuild:Compile</Generator>

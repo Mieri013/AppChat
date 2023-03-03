@@ -51,5 +51,7 @@ namespace ChatApp
             //Zamkniecie apki
             Application.Current.Shutdown();
         }
+
+        
     }
 }
