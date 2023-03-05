@@ -32,9 +32,9 @@ namespace ChatApp.ViewModels
                     ImieKontakt = "Adrian",
 
                     //Dodać zdjęcie
-                    //ZdjecieKontakt = new Uri("", UriKind.RelativeOrAbsolute),
+                    ZdjecieKontakt = new Uri("/assets/boy.png", UriKind.RelativeOrAbsolute),
 
-                    //StatusZdjecia = new Uri("" UriKind.RelativeOrAbsolute),
+                    StatusZdjecia = new Uri("/assets/adi.png", UriKind.RelativeOrAbsolute),
 
                     StatusDodania = false
                 },
@@ -44,9 +44,9 @@ namespace ChatApp.ViewModels
                     ImieKontakt = "Ala",
 
                     //Dodać zdjęcie
-                    //ZdjecieKontakt = new Uri("", UriKind.RelativeOrAbsolute),
+                    ZdjecieKontakt = new Uri("/assets/girl.png", UriKind.RelativeOrAbsolute),
 
-                    //StatusZdjecia = new Uri("" UriKind.RelativeOrAbsolute),
+                    StatusZdjecia = new Uri("/assets/ala.png", UriKind.RelativeOrAbsolute),
 
                     StatusDodania = false
                 },
@@ -56,9 +56,9 @@ namespace ChatApp.ViewModels
                     ImieKontakt = "Natalia",
 
                     //Dodać zdjęcie
-                    //ZdjecieKontakt = new Uri("", UriKind.RelativeOrAbsolute),
+                    ZdjecieKontakt = new Uri("/assets/girl.png", UriKind.RelativeOrAbsolute),
 
-                    //StatusZdjecia = new Uri("" UriKind.RelativeOrAbsolute),
+                    StatusZdjecia = new Uri("/assets/nat.png", UriKind.RelativeOrAbsolute),
 
                     StatusDodania = false
                 },
@@ -68,9 +68,9 @@ namespace ChatApp.ViewModels
                     ImieKontakt = "Paweł",
 
                     //Dodać zdjęcie
-                    //ZdjecieKontakt = new Uri("", UriKind.RelativeOrAbsolute),
+                    ZdjecieKontakt = new Uri("/assets/boy.png", UriKind.RelativeOrAbsolute),
 
-                    //StatusZdjecia = new Uri("" UriKind.RelativeOrAbsolute),
+                    StatusZdjecia = new Uri("/assets/Pawcio.png", UriKind.RelativeOrAbsolute),
 
                     StatusDodania = false
                 },
@@ -86,8 +86,8 @@ namespace ChatApp.ViewModels
             {
                 new ListaData
                 {
-                    ImieKontakt = "Kinga",
-                    ZdjecieKontakt = new Uri("", UriKind.RelativeOrAbsolute),
+                    ImieKontakt = "Natalia",
+                    ZdjecieKontakt = new Uri("/assets/nat.png", UriKind.RelativeOrAbsolute),
                     Wiadomosc = "Witaj! Co u Ciebie?",
                     OstCzasWiadomosc = "Wt 13:15",
                     Wybrany = true
@@ -95,21 +95,21 @@ namespace ChatApp.ViewModels
                 new ListaData
                 {
                     ImieKontakt = "Adrian",
-                    ZdjecieKontakt = new Uri("", UriKind.RelativeOrAbsolute),
+                    ZdjecieKontakt = new Uri("/assets/adi.png", UriKind.RelativeOrAbsolute),
                     Wiadomosc = "Żyjesz tam?",
                     OstCzasWiadomosc = "Pt 20:10"
                 },
                 new ListaData
                 {
                     ImieKontakt = "Ala",
-                    ZdjecieKontakt = new Uri("", UriKind.RelativeOrAbsolute),
+                    ZdjecieKontakt = new Uri("/assets/ala.png", UriKind.RelativeOrAbsolute),
                     Wiadomosc = "To o której jutro?",
                     OstCzasWiadomosc = "Nd 04:20"
                 },
                 new ListaData
                 {
                     ImieKontakt = "Paweł",
-                    ZdjecieKontakt = new Uri("", UriKind.RelativeOrAbsolute),
+                    ZdjecieKontakt = new Uri("/assets/Pawcio.png", UriKind.RelativeOrAbsolute),
                     Wiadomosc = "Weź się do pracy",
                     OstCzasWiadomosc = "Pon 18:18"
                 },
