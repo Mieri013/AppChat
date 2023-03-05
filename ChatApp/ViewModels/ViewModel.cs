@@ -13,7 +13,9 @@ namespace ChatApp.ViewModels
 {
     public class ViewModel: INotifyPropertyChanged
     {
-
+       public string ImieKontakt { get; set; }
+       public Uri ZdjecieKontakt { get; set; } 
+       public string OstWidziany { get; set; }
        public ObservableCollection<StatusDataModel> statusCollection { get; set; }
 
         void LoadStatus()

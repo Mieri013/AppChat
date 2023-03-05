@@ -15,6 +15,59 @@
         Title="Chat App"
         WindowStyle="None"
         WindowStartupLocation="CenterScreen">
+    <Window.Resources>
+        <Style x:Key="KontaktInfoStyle" TargetType="{x:Type Button}">
+            <Setter Property="Background" Value="#FF1493"/>
+            <Setter Property="BorderBrush" Value="#FF1493"/>
+            <Setter Property="BorderThickness" Value="0"/>
+        </Style>
+        <ControlTemplate x:Key="KontaktInfoGuzik" TargetType="{x:Type Button}">
+            <Border 
+                Background="{TemplateBinding Background}"
+                BorderBrush="{TemplateBinding BorderBrush}"
+                BorderThickness="{TemplateBinding BorderThickness}">
+            <Grid VerticalAlignment="Center">
+                <Grid.ColumnDefinitions>
+                    <!--Zdjęcie profilu-->
+                    <ColumnDefinition Width="75"/>
+                    
+                    <!--Imię i Status online-->
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Ellipse 
+                    Height="40" 
+                    Width="40">
+                    <Ellipse.Fill>
+                        <ImageBrush
+                            ImageSource="{Binding ZdjecieKontakt, FallbackValue=/assets/nat.png, 
+                            TargetNullValue=/assets/nat.png, UpdateSourceTrigger=PropertyChanged}"
+                            Stretch="UniformToFill"/>
+                    </Ellipse.Fill>
+                </Ellipse>
+
+                    <Grid
+                    Grid.Column="1">
+                        <TextBlock>
+                        <!--Imie-->
+                        <Run 
+                            Text="{Binding ImieKontakt, FallbackValue='Contact Imię',
+                            TargetNullValue='Contact Imię', UpdateSourceTrigger=PropertyChanged}"
+                            FontWeight="Bold"
+                            FontSize="20"/>
+                        <LineBreak/>
+                        
+                        <!--Status online-->
+                        <Run 
+                            Text="{Binding OstWidziany, FallbackValue='Ostatnio Widziany',
+                            TargetNullValue='Ostatnio Widziany', UpdateSourceTrigger=PropertyChanged}"
+                            FontSize="15"/>
+                    </TextBlock>
+                </Grid>
+                </Grid>
+            </Border>
+        </ControlTemplate>
+    </Window.Resources>
     <!--MainWindow struktura-->
     <Border CornerRadius="20"
             Background="WhiteSmoke">
@@ -158,6 +211,78 @@
                 
                 <!--Lista Chatów-->
                 <customcontrols:Lista Grid.Row="3" Margin="0,0,0,-60"/>
+
+                
+            </Grid>
+
+            <!--Konwersacje-->
+            <Grid
+                    Grid.Column="1"
+                    Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <!--Nagłówek konwersacji-->
+                    <RowDefinition Height="Auto"/>
+
+                    <!--Body-->
+                    <RowDefinition/>
+
+                    <!--Okno odpowiedzi-->
+                    <RowDefinition Height="Auto"/>
+
+                    <!--Wysyłka odpowiedzi-->
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <Grid
+                        Height="75"
+                        Margin="0,0,15,0"
+                        VerticalAlignment="Center">
+                    <Grid.ColumnDefinitions>
+                        <!--Nagłówek Imienia kontaktu i Status online-->
+                        <ColumnDefinition/>
+
+                        <!--Guzik do rozmów wideo-->
+                        <ColumnDefinition Width="50"/>
+
+                        <!--Guzik dzwonienia-->
+                        <ColumnDefinition Width="50"/>
+
+                        <!--Guzik szukaj wiadomości-->
+                        <ColumnDefinition Width="50"/>
+
+                        <!--Więcej Opcji-->
+                        <ColumnDefinition Width="50"/>
+                    </Grid.ColumnDefinitions>
+
+                    <!--Guzik Info Kontaktu-->
+                    <Button 
+                            Template="{StaticResource KontaktInfoGuzik}"
+                            Style="{StaticResource KontaktInfoStyle}"/>
+
+                    <!--Guzik wideorozmów-->
+                    <Button
+                            Content="{StaticResource videocall}"
+                            Grid.Column="1"
+                            Style="{StaticResource IconButtonStyle}"/>
+
+                    <!--Guzik rozmów-->
+                    <Button
+                            Content="{StaticResource call}"
+                            Grid.Column="2"
+                            Style="{StaticResource IconButtonStyle}"/>
+
+                    <!--Guzik szukania-->
+                    <Button
+                            Content="{StaticResource search}"
+                            Grid.Column="3"
+                            Style="{StaticResource IconButtonStyle}"/>
+
+                    <!--Guzik więcej opcji-->
+                    <ToggleButton 
+                        Grid.Column="4"
+                        Content="{StaticResource more}"
+                        Style="{StaticResource ToggleIconButtonStyle}"/>
+                </Grid>
             </Grid>
         </Grid>
     </Border>
