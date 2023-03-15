@@ -1,0 +1,95 @@
+﻿<UserControl x:Class="ChatApp.CustomControls.Konwersacje"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ChatApp.CustomControls"
+             mc:Ignorable="d" 
+             Height="Auto"
+             Width="Auto">
+    <UserControl.Resources>
+        <Style TargetType="{x:Type Button}">
+            <Setter Property="SnapsToDevicePixels" Value="True"/>
+            <Setter Property="Height" Value="Auto"/>
+            <Setter Property="Padding" Value="4,1"/>
+            <Setter Property="Margin" Value="10"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="Background" Value="#FFBCD9"/>
+            <Setter Property="BorderThickness" Value="0"/>
+
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border 
+                                        Width="300"
+                                        Height="90"
+                                        Background="{TemplateBinding Background}"
+                                        BorderThickness="{TemplateBinding BorderThickness}"
+                                        BorderBrush="{TemplateBinding BorderBrush}"
+                                        Padding="{TemplateBinding Padding}"
+                                        SnapsToDevicePixels="True"
+                                        x:Name="border">
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <!--Wiersz z wyszukiwaniem-->
+            <RowDefinition Height="Auto"/>
+            
+            <!--Body Konwersacji-->
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        
+        <!--Wyszukiwanie-->
+        <Border
+                    Background="LightGray"
+                    CornerRadius="15"
+                    Grid.Row="1"
+                    Margin="20"
+                    Height="50"
+                    x:Name="searchAreaBorder"
+                    FocusManager.FocusedElement="{Binding ElementName=searchDoubt}"
+                    >
+            <!--FocusManager.FocusedElement <- fokusowanie tekstu kiedy border się fokusuje-->
+            <TextBox
+                        Background="Transparent"
+                        BorderThickness="0"
+                        Name="searchDoubt"
+                        Padding="12,0"
+                        Text="Wyszukaj tekst"
+                        VerticalContentAlignment="Center"
+                        VerticalAlignment="Stretch"
+                        />
+        </Border>
+
+        <!--Body-->
+        <ScrollViewer
+            Background="WhiteSmoke"
+            HorizontalScrollBarVisibility="Disabled"
+            Grid.Row="1">
+            <ItemsControl
+                ItemsSource="{Binding Konwersacje, 
+                UpdateSourceTrigger=PropertyChanged}"
+                Margin="15,0,0,0"
+                ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <!--Dodać animacje-->
+                        <StackPanel/>
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Button/>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </ScrollViewer>
+    </Grid>
+</UserControl>
