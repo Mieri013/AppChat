@@ -21,3 +21,5 @@ C:\Users\admin\Documents\GitHub\AppChat\ChatApp\obj\Debug\CustomControls\Status.
 C:\Users\admin\Documents\GitHub\AppChat\ChatApp\obj\Debug\GeneratedInternalTypeHelper.g.cs
 C:\Users\admin\Documents\GitHub\AppChat\ChatApp\obj\Debug\CustomControls\Lista.g.cs
 C:\Users\admin\Documents\GitHub\AppChat\ChatApp\obj\Debug\CustomControls\Lista.baml
+C:\Users\admin\Documents\GitHub\AppChat\ChatApp\obj\Debug\CustomControls\Konwersacje.g.cs
+C:\Users\admin\Documents\GitHub\AppChat\ChatApp\obj\Debug\CustomControls\Konwersacje.baml

@@ -215,7 +215,7 @@
                 
             </Grid>
 
-            <!--Konwersacje-->
+            <!--Konwersacje nagłówek-->
             <Grid
                     Grid.Column="1"
                     Grid.Row="1">
@@ -283,6 +283,8 @@
                         Content="{StaticResource more}"
                         Style="{StaticResource ToggleIconButtonStyle}"/>
                 </Grid>
+                <!-- Konwersacja body-->
+                <customcontrols:Konwersacje Grid.Row="1"/>
             </Grid>
         </Grid>
     </Border>
