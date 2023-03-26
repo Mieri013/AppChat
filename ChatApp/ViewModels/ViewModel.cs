@@ -8,6 +8,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.SqlClient;
 
 namespace ChatApp.ViewModels
 {
@@ -118,10 +119,46 @@ namespace ChatApp.ViewModels
             };
             OnPropertyChanged();
         }
+
+        public ObservableCollection<ChatKonwersacja> Conversations;
+        void LoadChatConversation()
+        {
+            if (connection.State == System.Data.ConnectionState.Closed)
+                connection.Open();
+            using(SqlCommand com = new SqlCommand("select * from conversations where ImieKontakt=Natalia", connection))
+            {
+                using(SqlDataReader reader = com.ExecuteReader())
+                {
+                    while(reader.Read())
+                    {
+                        //format daty Jun 15, 01:15 PM
+                        string MsgReceivedOn = !string.IsNullOrEmpty(reader["MsgReceivedOn"].ToString()) ? 
+                            Convert.ToDateTime(reader["MsgReceivedOn"].ToString()).ToString("MMM dd, hh:mm tt") :"";
+                        string MsgSentOn = !string.IsNullOrEmpty(reader["MsgSentOn"].ToString()) ?
+                            Convert.ToDateTime(reader["MsgSentOn"].ToString()).ToString("MMM dd, hh:mm tt") : "";
+
+                        var conversation = new ChatKonwersacja()
+                        {
+                            ImieKontakt = reader["ContactName"].ToString(),
+                            OtrzymanaWiadomosc = reader["ReceivedMsgs"].ToString(),
+                            MsgReceivedOn = reader["MsgReceivedOn"].ToString(),
+                            WyslanaWiadomosc = reader["SentMsgs"].ToString(),
+                            MsgSentOn = reader["MsgSentOn"].ToString(),
+                            JestOtrzymana = string.IsNullOrEmpty(reader["ReceivedMsgs"].ToString()) ? false : true
+
+                        };
+                        Conversations.Add(conversation);
+                    }
+                }
+            }
+        }
+
+        SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=\Database\Database1.mdf;Integrated Security=True");
         public ViewModel()
         {
             LoadStatus();
             LoadChats();
+            LoadChatConversation();
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
